@@ -1,0 +1,59 @@
+@import "../common/mixins.scss";
+
+.menu {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @include desktop {
+    gap: 20px;
+  }
+}
+
+.menu__link {
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  color: $base-black;
+  gap: 8px;
+
+  @include tablet {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  @include desktop {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $base-primary;
+  }
+
+  &:active {
+    color: $base-black;
+    background-color: $base-secondary;
+
+    @include desktop {
+      color: $base-primary;
+    }
+  }
+}
+
+.menu__link-text {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: none;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+
+  @include desktop {
+    display: inline-block;
+  }
+}

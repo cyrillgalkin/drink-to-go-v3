@@ -1,0 +1,44 @@
+@import "../common/mixins.scss";
+
+.contacts {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  margin-top: 20px;
+}
+
+.contacts__item-wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
+
+  &::before {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    content: "";
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--address {
+    &::before {
+      align-self: flex-start;
+      margin-top: 2px;
+      background-image: url("../../icons/stack.svg#address");
+    }
+  }
+
+  &--phone {
+    &::before {
+      background-image: url("../../icons/stack.svg#phone");
+    }
+  }
+}
+
+.contacts__item {
+  font-style: normal;
+  color: $base-black;
+}

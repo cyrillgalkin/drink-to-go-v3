@@ -1,0 +1,35 @@
+.slider-pagination {
+  display: none;
+
+  @include desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.slider-pagination__control {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0;
+  width: 62px;
+  height: 4px;
+  background-color: $base-white;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-opacity;
+  }
+
+  &--active {
+    background-color: $base-primary;
+
+    &:hover,
+    &:focus {
+      background-color: $base-primary;
+    }
+  }
+}

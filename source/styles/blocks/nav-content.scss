@@ -1,0 +1,65 @@
+@import "../common/mixins.scss";
+
+
+.nav-content {
+  @include list-reset;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+  @include tablet {
+    flex-direction: row;
+    column-gap: 30px;
+  }
+
+  @include desktop {
+    width: 75%;
+  }
+}
+
+.nav-content__column {
+  padding: 20px;
+  border-bottom: 1px solid $base-secondary;
+
+  @include tablet {
+    padding: 0;
+    width: calc((100% - 60px) / 3);
+    border-bottom: none;
+  }
+}
+
+.nav-content__title {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: 700;
+  letter-spacing: 0.28px;
+  color: $base-primary;
+}
+
+.nav-content__list {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+}
+
+.nav-content__link {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  color: $base-black;
+
+  &:hover,
+  &:focus {
+    color: $primary-lighter;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
+}

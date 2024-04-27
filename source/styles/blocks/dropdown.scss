@@ -1,0 +1,98 @@
+@import "../common/mixins.scss";
+
+
+.dropdown {
+  position: relative;
+  padding: 4px 10px;
+  display: flex;
+  max-width: 165px;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+  column-gap: 10px;
+
+  &:hover,
+  &:focus {
+    background-color: $base-secondary;
+  }
+
+  &::after {
+    width: 10px;
+    height: 10px;
+    flex-shrink: 0;
+    content: "";
+    background-color: transparent;
+    background-image: url("../../icons/stack.svg#down");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--open {
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
+
+    &::after {
+      background-image: url("../../icons/stack.svg#up");
+    }
+
+    & .dropdown__options {
+      display: block;
+    }
+  }
+
+  @include tablet {
+    max-width: 100%;
+  }
+}
+
+.dropdown__value {
+  overflow: hidden;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: $base-primary;
+}
+
+.dropdown__options {
+  @include list-reset;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+  display: none;
+  min-width: 190px;
+  background-color: $base-white;
+  border-radius: 4px;
+  box-shadow: $shadow;
+}
+
+.dropdown__option {
+  padding: 8px 20px;
+  font-size: 16px;
+  line-height: 24px;
+  border-bottom: 1px solid $base-secondary;
+  cursor: pointer;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $base-secondary;
+  }
+
+  &--active {
+    color: $base-white;
+    background-color: $base-primary;
+
+    &:hover,
+    &:focus {
+      background-color: $base-primary;
+    }
+  }
+}

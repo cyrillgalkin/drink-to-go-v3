@@ -1,0 +1,42 @@
+@import "../common/mixins.scss";
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+
+
+  @include desktop {
+    &--footer {
+      row-gap: 10px;
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+}
+
+
+.logo__link {
+  display: block;
+}
+
+.logo__tagline {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: none;
+  font-size: 12px;
+  line-height: 16px;
+
+
+  @include desktop {
+    display: block;
+    max-width: 126px;
+
+    &--footer {
+      max-width: 100%;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.copyright__text {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: $base-grey;
+}
+
+.copyright__link {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 4px;
+  color: $base-grey;
+
+  &:hover,
+  &:focus {
+    color: $base-primary;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
+}
+
+.copyright__logo {
+  flex-shrink: 0;
+}

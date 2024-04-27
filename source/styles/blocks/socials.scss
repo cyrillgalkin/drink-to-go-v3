@@ -1,0 +1,29 @@
+@import "../common/mixins.scss";
+
+.socials {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  align-items: center;
+}
+
+
+.socials__link {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  color: $base-grey;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    color: $base-primary;
+    background-color: $base-secondary;
+  }
+
+  &:active {
+    color: $base-primary;
+    background-color: $primary-opacity;
+  }
+}

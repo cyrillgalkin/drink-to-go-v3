@@ -1,0 +1,80 @@
+@import "../common/mixins.scss";
+
+.navigation {
+  display: none;
+
+  &--open-mobile {
+    z-index: 1;
+    display: block;
+  }
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.navigation__list {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+
+  @include desktop {
+    gap: 20px;
+  }
+}
+
+.navigation__item {
+  border-top: 1px solid $base-secondary;
+
+  &:last-child {
+    border-bottom: 1px solid $base-secondary;
+  }
+
+  @include tablet {
+    border-top: none;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.navigation__link {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  color: $base-black;
+
+  &:hover,
+  &:focus {
+    color: $base-primary;
+  }
+
+  &:active {
+    background-color: $base-secondary;
+  }
+
+  @include tablet {
+    padding: 32px 20px;
+
+    &--active {
+      padding-bottom: 30px;
+      color: $base-primary;
+      border-bottom: 2px solid $base-primary;
+    }
+  }
+}

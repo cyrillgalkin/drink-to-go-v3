@@ -1,0 +1,82 @@
+@import "../common/mixins.scss";
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &--without-js {
+    margin-bottom: 229px;
+  }
+
+  @include tablet {
+    column-gap: 20px;
+  }
+}
+
+.header__logo {
+  padding: 12px 20px;
+
+  @include tablet {
+    margin-right: 7px;
+    padding: 22px 0;
+  }
+
+  @include desktop {
+    margin-right: 0;
+  }
+}
+
+
+.header__navigation {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: $base-white;
+
+
+  @include tablet {
+    position: static;
+    width: auto;
+    flex-grow: 1;
+  }
+}
+
+.header__menu {
+  justify-content: flex-end;
+  flex-grow: 1;
+
+  @include tablet {
+    flex-grow: 0;
+  }
+}
+
+.header__toggle-button {
+  padding: 0;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  background-image: url("../../icons/stack.svg#open-mobile-menu");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px;
+  border: none;
+
+
+  &:active {
+    background-color: $base-secondary;
+  }
+
+  &--close {
+    background-image: url("../../icons/stack.svg#close-mobile-menu");
+  }
+
+  &--without-js {
+    display: none;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}
