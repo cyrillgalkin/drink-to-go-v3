@@ -1,0 +1,1 @@
+function t(){document.querySelector(".map__image").classList.add("map__image--hidden");let e=L.map("map").setView([59.968322,30.317359],18),a=L.icon({iconUrl:"./images/map-pin.svg",iconSize:[38,50]});L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(e),L.marker([59.968322,30.317359],{icon:a}).addTo(e)}export{t as createMap};

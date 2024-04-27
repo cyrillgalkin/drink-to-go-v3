@@ -1,0 +1,1 @@
+function e(){let i=document.querySelectorAll(".navigation__link");i.forEach(a=>{a.addEventListener("click",n=>{i.forEach(t=>{t.classList.remove("navigation__link--active")}),n.target.classList.add("navigation__link--active")})})}export{e as activateNavigationLink};
