@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body class="page__body">
-    <header class="header container header--without-js" data-test="header">
+    <header class="header container header--without-js">
       <div class="header__logo logo">
         <a class="logo__link" href="#">
           <picture>
@@ -85,7 +85,7 @@
         aria-label="Кнопка для открытия или закрытия мобильного меню"></button>
     </header>
     <main class="main">
-      <section class="hero" data-test="hero">
+      <section class="hero">
         <ul class="hero__list">
           <li class="hero__item hero__item--active hero__item--flat-white">
             <div class="hero__item-wrapper">
@@ -127,7 +127,7 @@
                     <span class="hero__new-price">225&#8381;
                     </span>
                   </div>
-                  <button class="hero__button button" type="button">Заказать</button>
+                  <a class="hero__button button" href="#">Заказать</a>
                 </div>
               </div>
             </div>
@@ -150,7 +150,8 @@
                 <source media="(min-width: 768px)"
                   srcset="./images/latte-tablet@1x.png 1x, ./images/latte-tablet@2x.png 2x"
                   type="image/png">
-                <img class="hero__image" width="280" height="280" src="./images/latte-mobile@1x.png"
+                <img class="hero__image" width="280" height="280"
+                  src="./images/latte-mobile@1x.png"
                   srcset="./images/latte-mobile@2x.png 2x"
                   alt="Лавандовый Латте.">
               </picture>
@@ -170,7 +171,7 @@
                     <span class="hero__new-price">265&#8381;
                     </span>
                   </div>
-                  <button class="hero__button button" type="button">Заказать</button>
+                  <a class="hero__button button" href="#">Заказать</a>
                 </div>
               </div>
             </div>
@@ -203,7 +204,8 @@
                   <p class="heading__subtitle">Новинка!</p>
                   <h2 class="heading__title heading__title--large">Тройной Эспрессо</h2>
                 </div>
-                <p class="hero__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот
+                <p class="hero__description">Мощнее укола адреналина, чернее самой тёмной ночи,
+                  этот
                   тройной эспрессо из&nbsp;Колумбии покажет вам, что такое настоящая бодрость
                 </p>
                 <div class="hero__order-wrapper">
@@ -213,7 +215,7 @@
                     <span class="hero__new-price">375&#8381;
                     </span>
                   </div>
-                  <button class="hero__button button" type="button">Заказать</button>
+                  <a class="hero__button button" href="#">Заказать</a>
                 </div>
               </div>
             </div>
@@ -254,7 +256,7 @@
           </svg>
         </button>
       </section>
-      <section class="features" data-test="features">
+      <section class="features">
         <div class="container">
           <div class="features__heading heading">
             <p class="heading__subtitle">Преимущества</p>
@@ -264,7 +266,8 @@
             <li class="features__item features__item--speed">
               <div class="features__text">
                 <h3 class="features__item-title">Скорость</h3>
-                <p class="features__item-description">Готовый напиток всегда под рукой&nbsp;&mdash;
+                <p class="features__item-description">Готовый напиток всегда под
+                  рукой&nbsp;&mdash;
                   просто открой банку</p>
               </div>
             </li>
@@ -286,14 +289,15 @@
             <li class="features__item features__item--eco">
               <div class="features__text">
                 <h3 class="features__item-title">Экологичность</h3>
-                <p class="features__item-description">Вся упаковка сделана из&nbsp;перерабатываемых
+                <p class="features__item-description">Вся упаковка сделана
+                  из&nbsp;перерабатываемых
                   материалов</p>
               </div>
             </li>
           </ul>
         </div>
       </section>
-      <section class="catalog" data-test="catalog">
+      <section class="catalog">
         <div class="container">
           <div class="catalog__heading heading">
             <p class="heading__subtitle">Каталог</p>
@@ -385,7 +389,8 @@
               </div>
               <div class="catalog__buttons">
                 <button class="catalog__button button" type="submit">Применить</button>
-                <button class="catalog__button button button--reset" type="reset">Сбросить</button>
+                <button class="catalog__button button button--reset"
+                  type="reset">Сбросить</button>
               </div>
             </form>
             <div class="catalog__products-wrapper">
@@ -421,8 +426,8 @@
                   <div class="products__order">
                     <span class="products__price">225&#8381;
                     </span>
-                    <button class="products__button button button--with-icon" type="button">В
-                      корзину</button>
+                    <a class="products__button button button--with-icon" href="#">В
+                      корзину</a>
                   </div>
                 </li>
                 <li class="products__item">
@@ -444,8 +449,8 @@
                   <div class="products__order">
                     <span class="products__price">225&#8381;
                     </span>
-                    <button class="products__button button button--with-icon" type="button">В
-                      корзину</button>
+                    <a class="products__button button button--with-icon" href="#">В
+                      корзину</a>
                   </div>
                 </li>
                 <li class="products__item">
@@ -467,8 +472,8 @@
                   <div class="products__order">
                     <span class="products__price">225&#8381;
                     </span>
-                    <button class="products__button button button--with-icon" type="button">В
-                      корзину</button>
+                    <a class="products__button button button--with-icon" href="#">В
+                      корзину</a>
                   </div>
                 </li>
                 <li class="products__item">
@@ -490,8 +495,8 @@
                   <div class="products__order">
                     <span class="products__price">225&#8381;
                     </span>
-                    <button class="products__button button button--with-icon" type="button">В
-                      корзину</button>
+                    <a class="products__button button button--with-icon" href="#">В
+                      корзину</a>
                   </div>
                 </li>
                 <li class="products__item">
@@ -513,8 +518,8 @@
                   <div class="products__order">
                     <span class="products__price">225&#8381;
                     </span>
-                    <button class="products__button button button--with-icon" type="button">В
-                      корзину</button>
+                    <a class="products__button button button--with-icon" href="#">В
+                      корзину</a>
                   </div>
                 </li>
                 <li class="products__item">
@@ -536,8 +541,8 @@
                   <div class="products__order">
                     <span class="products__price">225&#8381;
                     </span>
-                    <button class="products__button button button--with-icon" type="button">В
-                      корзину</button>
+                    <a class="products__button button button--with-icon" href="#">В
+                      корзину</a>
                   </div>
                 </li>
               </ul>
@@ -556,13 +561,13 @@
               </button>
             </li>
             <li class="pagination__item">
-              <button class="pagination__button pagination-button-page" type="button">1</button>
+              <a class="pagination__button pagination-button-page" href="#">1</a>
             </li>
             <li class="pagination__item">
-              <button class="pagination__button pagination-button-page" type="button">2</button>
+              <a class="pagination__button pagination-button-page" href="#">2</a>
             </li>
             <li class="pagination__item">
-              <button class="pagination__button pagination-button-page" type="button">3</button>
+              <a class="pagination__button pagination-button-page" href="#">3</a>
             </li>
             <li class="pagination__item">
               <button class="pagination__button pagination-button-next"
@@ -578,7 +583,7 @@
           </ul>
         </div>
       </section>
-      <section class="map" id="map" data-test="map">
+      <section class="map" id="map">
         <h2 class="visually-hidden">Адрес нашего магазина</h2>
         <picture>
           <source media="(min-width: 1440px)"
@@ -593,14 +598,15 @@
             srcset="./images/map-desktop@1x.png 1x, ./images/map-desktop@2x.png 2x"
             type="image/png">
           <source media="(min-width: 768px)"
-            srcset="./images/map-tablet@1x.png 1x, ./images/map-tablet@2x.png 2x" type="image/png">
+            srcset="./images/map-tablet@1x.png 1x, ./images/map-tablet@2x.png 2x"
+            type="image/png">
           <img class="map__image" width="320" height="420" src="./images/map-mobile@1x.png"
             srcset="./images/map-mobile@2x.png 2x"
             alt="Адрес нашего магазина: Санкт-Петербург, набережная реки Карповки, дом 5.">
         </picture>
       </section>
     </main>
-    <footer class="footer container" data-test="footer">
+    <footer class="footer container">
       <div class="footer__content-wrapper">
         <div class="footer__socials-wrapper">
           <div class="footer__logo logo logo--footer">
